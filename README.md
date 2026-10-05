@@ -1,11 +1,11 @@
-# 🐍💕 Snake Gemes
+# 🐍💕 Kanja as Snake
 
 Ular imut yang lapar hati~  
-Game snake aesthetic pastel, siap langsung di-host di **GitHub Pages**.
+Game snake aesthetic pastel dengan custom aksesoris, siap langsung di-host di **GitHub Pages**.
 
 ## Cara Upload ke GitHub Pages
 
-1. Buat repository baru di GitHub (misalnya `snake-gemes`)
+1. Buat repository baru di GitHub (misalnya `kanja-as-snake`)
 2. Upload file `index.html` ke repository tersebut
 3. Pergi ke **Settings → Pages**
 4. Source pilih branch `main` (atau `master`) + folder `/ (root)`
@@ -15,11 +15,13 @@ Game snake aesthetic pastel, siap langsung di-host di **GitHub Pages**.
 
 ## Fitur
 
-- Desain pastel cute & aesthetic
+- Nama: **Kanja as Snake**
+- Kecepatan lebih pelan & nyaman
+- Custom aksesoris: Pita 🎀, Topi 🎩, Telinga Kucing 🐱, Mahkota 👑, Bunga 🌸, Kacamata 👓
+- Pilihan aksesoris tersimpan di browser
 - Ular berpipi + senyum + mata ikut arah
-- Makanan berbentuk hati 💕
-- Efek sparkle (✨💕🌸) saat makan
-- Skor + High Score (tersimpan di browser)
+- Makanan berbentuk hati 💕 + efek sparkle
+- Skor + High Score
 - Kontrol keyboard & tombol HP
 - Pause / Resume
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Snake Gemes 💕</title>
+  <title>Kanja as Snake 🐍💕</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -51,10 +51,10 @@
     }
 
     h1 {
-      font-size: 1.75rem;
+      font-size: 1.7rem;
       font-weight: 800;
       letter-spacing: 0.5px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       background: linear-gradient(90deg, #ec4899, #a78bfa, #38bdf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -62,24 +62,24 @@
     }
 
     .subtitle {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #a78bfa;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     .score-board {
       display: flex;
-      gap: 14px;
-      margin-bottom: 14px;
-      font-size: 0.95rem;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
       font-weight: 700;
     }
 
     .score-board span {
       background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(8px);
-      padding: 8px 16px;
+      padding: 7px 14px;
       border-radius: 999px;
       border: 2px solid rgba(244, 114, 182, 0.25);
       box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
@@ -88,6 +88,42 @@
 
     .score-board strong {
       color: #ec4899;
+    }
+
+    /* Accessory picker */
+    .acc-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 10px;
+      max-width: 340px;
+    }
+
+    .acc-btn {
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid #f9a8d4;
+      color: #be185d;
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s;
+      box-shadow: none;
+      min-width: unset;
+    }
+
+    .acc-btn:hover {
+      background: #fce7f3;
+    }
+
+    .acc-btn.active {
+      background: linear-gradient(135deg, #f472b6, #ec4899);
+      color: white;
+      border-color: #ec4899;
+      box-shadow: 0 3px 10px rgba(236, 72, 153, 0.3);
     }
 
     #gameCanvas {
@@ -99,15 +135,15 @@
         0 0 0 6px rgba(255, 255, 255, 0.6),
         inset 0 0 20px rgba(253, 164, 175, 0.15);
       max-width: 92vw;
-      max-height: 55vh;
+      max-height: 50vh;
     }
 
     .controls {
-      margin-top: 16px;
+      margin-top: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn-row {
@@ -119,8 +155,8 @@
       background: linear-gradient(135deg, #f472b6, #ec4899);
       color: white;
       border: none;
-      padding: 12px 22px;
-      font-size: 1rem;
+      padding: 11px 20px;
+      font-size: 0.95rem;
       font-weight: 700;
       font-family: 'Nunito', sans-serif;
       border-radius: 999px;
@@ -142,15 +178,15 @@
 
     .d-pad {
       display: grid;
-      grid-template-columns: 64px 64px 64px;
-      grid-template-rows: 48px 48px 48px;
-      gap: 6px;
-      margin-top: 6px;
+      grid-template-columns: 60px 60px 60px;
+      grid-template-rows: 44px 44px 44px;
+      gap: 5px;
+      margin-top: 4px;
     }
 
     .d-pad button {
       padding: 0;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -182,7 +218,7 @@
 
     .overlay-card {
       background: white;
-      padding: 32px 40px;
+      padding: 28px 36px;
       border-radius: 28px;
       box-shadow: 0 20px 50px rgba(236, 72, 153, 0.18);
       text-align: center;
@@ -191,7 +227,7 @@
     }
 
     .overlay h2 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       margin-bottom: 6px;
       background: linear-gradient(90deg, #ec4899, #a78bfa);
       -webkit-background-clip: text;
@@ -200,15 +236,15 @@
     }
 
     .overlay p {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       color: #9d7ab8;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 600;
     }
 
     .hint {
-      margin-top: 12px;
-      font-size: 0.8rem;
+      margin-top: 8px;
+      font-size: 0.75rem;
       color: #c4b5fd;
       text-align: center;
       max-width: 280px;
@@ -230,18 +266,29 @@
 
     @media (min-width: 600px) {
       .d-pad { display: none; }
-      h1 { font-size: 2rem; }
+      h1 { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>🐍💕 Snake Gemes</h1>
+    <h1>🐍💕 Kanja as Snake</h1>
     <p class="subtitle">ular imut yang lapar hati~</p>
 
     <div class="score-board">
       <span>Skor: <strong id="score">0</strong></span>
       <span>High: <strong id="highScore">0</strong></span>
+    </div>
+
+    <!-- Accessory picker -->
+    <div class="acc-picker" id="accPicker">
+      <button class="acc-btn active" data-acc="none">Tanpa</button>
+      <button class="acc-btn" data-acc="pita">🎀 Pita</button>
+      <button class="acc-btn" data-acc="topi">🎩 Topi</button>
+      <button class="acc-btn" data-acc="telinga">🐱 Telinga</button>
+      <button class="acc-btn" data-acc="mahkota">👑 Mahkota</button>
+      <button class="acc-btn" data-acc="bunga">🌸 Bunga</button>
+      <button class="acc-btn" data-acc="kacamata">👓 Kacamata</button>
     </div>
 
     <canvas id="gameCanvas" width="400" height="400"></canvas>
@@ -265,8 +312,8 @@
 
   <div id="overlay" class="overlay">
     <div class="overlay-card">
-      <h2 id="overlayTitle">Snake Gemes 💕</h2>
-      <p id="overlayMsg">Ayo main, kumpulkan hati!</p>
+      <h2 id="overlayTitle">Kanja as Snake 💕</h2>
+      <p id="overlayMsg">Pilih aksesoris, lalu mulai main!</p>
       <button id="overlayBtn">Mulai Main ✨</button>
     </div>
   </div>
@@ -286,9 +333,19 @@
     const GRID = 20;
     const TILE = canvas.width / GRID;
     let snake, food, direction, nextDirection, score, highScore, gameLoop, isPaused, isRunning;
+    let currentAcc = 'none';
 
-    highScore = parseInt(localStorage.getItem('snakeGemesHigh') || '0');
+    // Lebih pelan dari sebelumnya (dulu 115ms)
+    const SPEED = 160;
+
+    highScore = parseInt(localStorage.getItem('kanjaSnakeHigh') || '0');
     highScoreEl.textContent = highScore;
+
+    // Load saved accessory
+    currentAcc = localStorage.getItem('kanjaSnakeAcc') || 'none';
+    document.querySelectorAll('.acc-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.acc === currentAcc);
+    });
 
     const colors = {
       grid: 'rgba(251, 207, 232, 0.45)',
@@ -298,6 +355,18 @@
       foodGlow: 'rgba(244, 114, 182, 0.35)',
       eye: '#1e1b4b'
     };
+
+    // Accessory picker
+    document.querySelectorAll('.acc-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.acc-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentAcc = btn.dataset.acc;
+        localStorage.setItem('kanjaSnakeAcc', currentAcc);
+        // Redraw if not running so player can preview
+        if (!isRunning) draw();
+      });
+    });
 
     function initGame() {
       snake = [{ x: 10, y: 10 }];
@@ -310,7 +379,7 @@
       placeFood();
       overlay.classList.add('hidden');
       if (gameLoop) clearInterval(gameLoop);
-      gameLoop = setInterval(update, 115);
+      gameLoop = setInterval(update, SPEED);
     }
 
     function placeFood() {
@@ -366,7 +435,7 @@
         if (score > highScore) {
           highScore = score;
           highScoreEl.textContent = highScore;
-          localStorage.setItem('snakeGemesHigh', highScore);
+          localStorage.setItem('kanjaSnakeHigh', highScore);
         }
         spawnSparkles(food.x, food.y);
         placeFood();
@@ -388,6 +457,164 @@
       ctx.closePath();
       ctx.fill();
       ctx.restore();
+    }
+
+    // ===== ACCESSORIES =====
+    function drawAccessory(px, py) {
+      const cx = px + TILE / 2;
+      const cy = py + TILE / 2;
+
+      if (currentAcc === 'pita') {
+        // Bow / ribbon on top
+        ctx.fillStyle = '#ec4899';
+        // left loop
+        ctx.beginPath();
+        ctx.ellipse(cx - 6, py + 2, 6, 4, -0.3, 0, Math.PI * 2);
+        ctx.fill();
+        // right loop
+        ctx.beginPath();
+        ctx.ellipse(cx + 6, py + 2, 6, 4, 0.3, 0, Math.PI * 2);
+        ctx.fill();
+        // center knot
+        ctx.fillStyle = '#be185d';
+        ctx.beginPath();
+        ctx.arc(cx, py + 2, 3, 0, Math.PI * 2);
+        ctx.fill();
+        // tails
+        ctx.fillStyle = '#f472b6';
+        ctx.beginPath();
+        ctx.moveTo(cx - 2, py + 4);
+        ctx.lineTo(cx - 5, py + 10);
+        ctx.lineTo(cx, py + 6);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(cx + 2, py + 4);
+        ctx.lineTo(cx + 5, py + 10);
+        ctx.lineTo(cx, py + 6);
+        ctx.fill();
+      }
+
+      if (currentAcc === 'topi') {
+        // Cute mini hat
+        ctx.fillStyle = '#7c3aed';
+        // brim
+        ctx.beginPath();
+        ctx.ellipse(cx, py + 3, 11, 3.5, 0, 0, Math.PI * 2);
+        ctx.fill();
+        // top
+        ctx.fillStyle = '#8b5cf6';
+        ctx.beginPath();
+        ctx.roundRect(cx - 6, py - 6, 12, 10, 3);
+        ctx.fill();
+        // band
+        ctx.fillStyle = '#f472b6';
+        ctx.fillRect(cx - 6, py + 1, 12, 2.5);
+      }
+
+      if (currentAcc === 'telinga') {
+        // Cat ears
+        ctx.fillStyle = '#4ade80';
+        // left ear
+        ctx.beginPath();
+        ctx.moveTo(px + 3, py + 6);
+        ctx.lineTo(px + 5, py - 4);
+        ctx.lineTo(px + 10, py + 4);
+        ctx.closePath();
+        ctx.fill();
+        // right ear
+        ctx.beginPath();
+        ctx.moveTo(px + 17, py + 6);
+        ctx.lineTo(px + 15, py - 4);
+        ctx.lineTo(px + 10, py + 4);
+        ctx.closePath();
+        ctx.fill();
+        // inner pink
+        ctx.fillStyle = '#fda4af';
+        ctx.beginPath();
+        ctx.moveTo(px + 5, py + 4);
+        ctx.lineTo(px + 6, py - 1);
+        ctx.lineTo(px + 9, py + 3);
+        ctx.closePath();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(px + 15, py + 4);
+        ctx.lineTo(px + 14, py - 1);
+        ctx.lineTo(px + 11, py + 3);
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      if (currentAcc === 'mahkota') {
+        // Crown
+        ctx.fillStyle = '#fbbf24';
+        ctx.beginPath();
+        ctx.moveTo(px + 3, py + 5);
+        ctx.lineTo(px + 5, py - 2);
+        ctx.lineTo(px + 8, py + 3);
+        ctx.lineTo(px + 10, py - 5);
+        ctx.lineTo(px + 12, py + 3);
+        ctx.lineTo(px + 15, py - 2);
+        ctx.lineTo(px + 17, py + 5);
+        ctx.closePath();
+        ctx.fill();
+        // jewels
+        ctx.fillStyle = '#ec4899';
+        ctx.beginPath();
+        ctx.arc(px + 10, py + 1, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#38bdf8';
+        ctx.beginPath();
+        ctx.arc(px + 6, py + 2, 1.5, 0, Math.PI * 2);
+        ctx.arc(px + 14, py + 2, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      if (currentAcc === 'bunga') {
+        // Flower on top
+        const petals = 5;
+        ctx.fillStyle = '#f9a8d4';
+        for (let i = 0; i < petals; i++) {
+          const angle = (i / petals) * Math.PI * 2 - Math.PI / 2;
+          ctx.beginPath();
+          ctx.ellipse(
+            cx + Math.cos(angle) * 5,
+            py + 1 + Math.sin(angle) * 5,
+            4, 3, angle, 0, Math.PI * 2
+          );
+          ctx.fill();
+        }
+        // center
+        ctx.fillStyle = '#fbbf24';
+        ctx.beginPath();
+        ctx.arc(cx, py + 1, 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      if (currentAcc === 'kacamata') {
+        // Glasses
+        ctx.strokeStyle = '#1e1b4b';
+        ctx.lineWidth = 1.8;
+        // left lens
+        ctx.beginPath();
+        ctx.arc(px + 7, py + 9, 4.5, 0, Math.PI * 2);
+        ctx.stroke();
+        // right lens
+        ctx.beginPath();
+        ctx.arc(px + 13, py + 9, 4.5, 0, Math.PI * 2);
+        ctx.stroke();
+        // bridge
+        ctx.beginPath();
+        ctx.moveTo(px + 11.5, py + 9);
+        ctx.lineTo(px + 8.5, py + 9);
+        ctx.stroke();
+        // arms
+        ctx.beginPath();
+        ctx.moveTo(px + 2.5, py + 9);
+        ctx.lineTo(px + 0, py + 8);
+        ctx.moveTo(px + 17.5, py + 9);
+        ctx.lineTo(px + 20, py + 8);
+        ctx.stroke();
+      }
     }
 
     function draw() {
@@ -420,7 +647,7 @@
       ctx.fillStyle = colors.food;
       drawHeart(food.x * TILE + TILE / 2, food.y * TILE + TILE / 2 + 1, TILE * 0.85);
 
-      // Shine on heart
+      // Shine
       ctx.fillStyle = 'rgba(255,255,255,0.7)';
       ctx.beginPath();
       ctx.arc(food.x * TILE + TILE / 2 - 3, food.y * TILE + TILE / 2 - 4, 2.5, 0, Math.PI * 2);
@@ -444,26 +671,23 @@
           ctx.ellipse(px + TILE * 0.38, py + TILE * 0.32, 5, 3.5, -0.4, 0, Math.PI * 2);
           ctx.fill();
 
-          // Eyes follow direction
+          // Eyes
           const eyeOffset = direction.x !== 0
             ? { x: direction.x * 3, y: 0 }
             : { x: 0, y: direction.y * 2 };
 
-          // White eyes
           ctx.fillStyle = 'white';
           ctx.beginPath();
           ctx.arc(px + 7 + eyeOffset.x, py + 8 + eyeOffset.y, 3.8, 0, Math.PI * 2);
           ctx.arc(px + 13 + eyeOffset.x, py + 8 + eyeOffset.y, 3.8, 0, Math.PI * 2);
           ctx.fill();
 
-          // Pupils
           ctx.fillStyle = colors.eye;
           ctx.beginPath();
           ctx.arc(px + 7.5 + eyeOffset.x + direction.x, py + 8.2 + eyeOffset.y + direction.y * 0.5, 2.1, 0, Math.PI * 2);
           ctx.arc(px + 13.5 + eyeOffset.x + direction.x, py + 8.2 + eyeOffset.y + direction.y * 0.5, 2.1, 0, Math.PI * 2);
           ctx.fill();
 
-          // Eye shine
           ctx.fillStyle = 'white';
           ctx.beginPath();
           ctx.arc(px + 6.5 + eyeOffset.x, py + 7 + eyeOffset.y, 1, 0, Math.PI * 2);
@@ -485,6 +709,9 @@
           ctx.arc(px + TILE / 2, py + 15, 3, 0.15, Math.PI - 0.15);
           ctx.stroke();
 
+          // Draw accessory on head
+          drawAccessory(px, py);
+
         } else {
           // Body
           const colorIdx = (i - 1) % colors.snakeBody.length;
@@ -493,7 +720,6 @@
           ctx.roundRect(px + 3, py + 3, TILE - 6, TILE - 6, 8);
           ctx.fill();
 
-          // Soft highlight
           ctx.fillStyle = 'rgba(255,255,255,0.25)';
           ctx.beginPath();
           ctx.roundRect(px + 5, py + 5, TILE - 12, 5, 4);
@@ -506,7 +732,7 @@
       isRunning = false;
       clearInterval(gameLoop);
       overlayTitle.textContent = 'Yahh kalah 🥺';
-      overlayMsg.textContent = `Skor kamu: ${score} 💕`;
+      overlayMsg.textContent = `Skor Kanja: ${score} 💕`;
       overlayBtn.textContent = 'Main Lagi ✨';
       overlay.classList.remove('hidden');
     }
@@ -553,7 +779,7 @@
     overlayBtn.addEventListener('click', initGame);
     pauseBtn.addEventListener('click', togglePause);
 
-    // Initial draw (empty board look)
+    // Initial preview
     food = { x: 15, y: 10 };
     snake = [{ x: 10, y: 10 }];
     direction = { x: 1, y: 0 };
