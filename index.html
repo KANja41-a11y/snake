@@ -135,7 +135,7 @@
         0 0 0 6px rgba(255, 255, 255, 0.6),
         inset 0 0 20px rgba(253, 164, 175, 0.15);
       max-width: 92vw;
-      max-height: 50vh;
+      max-height: 58vh;
     }
 
     .controls {
@@ -291,7 +291,7 @@
       <button class="acc-btn" data-acc="kacamata">👓 Kacamata</button>
     </div>
 
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <canvas id="gameCanvas" width="480" height="480"></canvas>
 
     <div class="controls">
       <div class="btn-row">
@@ -336,7 +336,7 @@
     let currentAcc = 'none';
 
     // Lebih pelan dari sebelumnya (dulu 115ms)
-    const SPEED = 160;
+    const SPEED = 210;
 
     highScore = parseInt(localStorage.getItem('kanjaSnakeHigh') || '0');
     highScoreEl.textContent = highScore;
