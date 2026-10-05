@@ -1,1 +1,28 @@
-# snake
+# 🐍💕 Snake Gemes
+
+Ular imut yang lapar hati~  
+Game snake aesthetic pastel, siap langsung di-host di **GitHub Pages**.
+
+## Cara Upload ke GitHub Pages
+
+1. Buat repository baru di GitHub (misalnya `snake-gemes`)
+2. Upload file `index.html` ke repository tersebut
+3. Pergi ke **Settings → Pages**
+4. Source pilih branch `main` (atau `master`) + folder `/ (root)`
+5. Klik **Save**
+6. Tunggu 1–2 menit, game live di:  
+   `https://USERNAME.github.io/NAMA-REPO/`
+
+## Fitur
+
+- Desain pastel cute & aesthetic
+- Ular berpipi + senyum + mata ikut arah
+- Makanan berbentuk hati 💕
+- Efek sparkle (✨💕🌸) saat makan
+- Skor + High Score (tersimpan di browser)
+- Kontrol keyboard & tombol HP
+- Pause / Resume
+
+## Main Lokal
+
+Cukup buka `index.html` di browser.
